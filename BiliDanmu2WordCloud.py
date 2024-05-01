@@ -63,7 +63,6 @@ def get_jieci_list(comment_list):
         # 提取关键词和权重
         freq = jieba.analyse.extract_tags(jieci_str,200,withWeight = True)  
         # 提取文件中的关键词，topK表示提取的数量，withWeight=True表示会返回关键词的权重。
-        #print(freq)
         freq = {i[0]: i[1] for i in freq}  # 字典
         return freq
     except Exception as e:
@@ -95,4 +94,4 @@ def bv_2_wordcloud(bv):
     
 
 if __name__ == "__main__":
-    bv_2_wordcloud("BV17F4m1w7wf")
+    bv_2_wordcloud("你想要查询的视频BV")
